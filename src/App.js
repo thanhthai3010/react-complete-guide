@@ -8,8 +8,7 @@ const app = props => {
       { name: "Max", age: 28 },
       { name: "Manu", age: 29 },
       { name: "Ste", age: 26 }
-    ],
-    otherState: "Some other value"
+    ]
   });
 
   const switchNameHandler = () => {
@@ -33,8 +32,9 @@ const app = props => {
       <Person
         name={personsState.persons[1].name}
         age={personsState.persons[1].age}
+        click={switchNameHandler}
       >
-        My hobbies: racing
+        My hobbies: can click to change
       </Person>
       <Person
         name={personsState.persons[2].name}
