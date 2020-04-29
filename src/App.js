@@ -37,22 +37,25 @@ const app = props => {
       <button onClick={() => switchNameHandler("Button Click name")}>
         Switch Name
       </button>
-      <Person
-        name={personsState.persons[0].name}
-        age={personsState.persons[0].age}
-      />
-      <Person
-        name={personsState.persons[1].name}
-        age={personsState.persons[1].age}
-        click={() => switchNameHandler("NewNameValue")}
-        changed={nameChangedHandler}
-      >
-        My hobbies: can click to change
-      </Person>
-      <Person
-        name={personsState.persons[2].name}
-        age={personsState.persons[2].age}
-      />
+
+      <div>
+        <Person
+          name={personsState.persons[0].name}
+          age={personsState.persons[0].age}
+        />
+        <Person
+          name={personsState.persons[1].name}
+          age={personsState.persons[1].age}
+          click={() => switchNameHandler("NewNameValue")}
+          changed={nameChangedHandler}
+        >
+          My hobbies: can click to change
+        </Person>
+        <Person
+          name={personsState.persons[2].name}
+          age={personsState.persons[2].age}
+        />
+      </div>
     </div>
   );
 };
